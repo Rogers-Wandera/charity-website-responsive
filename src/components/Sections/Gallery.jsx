@@ -1,29 +1,36 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import charity1 from "../../assets/img-charity/3.jpg";
-import charity2 from "../../assets/img-charity/7.jpg";
-import charity3 from "../../assets/img-charity/28.jpg";
-import charity4 from "../../assets/img-charity/29.jpg";
-import charity5 from "../../assets/img-charity/30.jpg";
-import charity6 from "../../assets/img-charity/31.jpg";
-import charity7 from "../../assets/img-charity/32.jpg";
-import charity8 from "../../assets/img-charity/33.jpg";
-import charity9 from "../../assets/img-charity/24.jpg";
-import charity10 from "../../assets/img-charity/25.jpg";
-import charity11 from "../../assets/img-charity/26.jpg";
-import charity12 from "../../assets/img-charity/23.jpg";
-import charity13 from "../../assets/img-charity/22.jpg";
-import charity14 from "../../assets/img-charity/13.jpg";
-import charity15 from "../../assets/img-charity/14.jpg";
-import charity16 from "../../assets/img-charity/16.jpg";
-import charity17 from "../../assets/img-charity/21.jpg";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import charity1 from "../../assets/save/1 (1).jpg";
+import charity2 from "../../assets/save/1 (2).jpg";
+import charity3 from "../../assets/save/1 (3).jpg";
+import charity4 from "../../assets/save/1 (4).jpg";
+import charity5 from "../../assets/save/1 (5).jpg";
+import charity6 from "../../assets/save/1 (6).jpg";
+import charity7 from "../../assets/save/1 (7).jpg";
+import charity8 from "../../assets/save/1 (8).jpg";
+import charity9 from "../../assets/save/1 (9).jpg";
+import charity10 from "../../assets/save/1 (10).jpg";
+import charity11 from "../../assets/save/1 (11).jpg";
+import charity12 from "../../assets/save/1 (12).jpg";
+import charity13 from "../../assets/save/1 (13).jpg";
+import charity14 from "../../assets/save/1 (14).jpg";
+import charity15 from "../../assets/save/1 (15).jpg";
+import charity16 from "../../assets/save/1 (16).jpg";
+import charity17 from "../../assets/save/1 (17).jpg";
 
 export default function GalleryImage() {
   return (
-    <Box sx={{ width: "100%", height: "auto", overflowY: 'scroll' }}>
+    <Box
+      sx={{
+        width: "100%",
+        height: "auto",
+        overflowY: "scroll",
+        margin: "8rem 0 2rem 0",
+      }}
+    >
       <ImageList variant="masonry" cols={3} gap={8}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
@@ -44,87 +51,87 @@ export default function GalleryImage() {
 const itemData = [
   {
     img: charity1,
-    title: 'Bed',
-    author: "Love Happiness Foundation",
+    title: "Bed",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity2,
-    title: 'Books',
-    author: "Love Happiness Foundation",
+    title: "Books",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity3,
-    title: 'Sink',
-    author: "Love Happiness Foundation",
+    title: "Sink",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity4,
-    title: 'Kitchen',
-    author: "Love Happiness Foundation",
+    title: "Kitchen",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity5,
-    title: 'Blinds',
-    author: "Love Happiness Foundation",
+    title: "Blinds",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity6,
-    title: 'Chairs',
-    author: "Love Happiness Foundation",
+    title: "Chairs",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity7,
-    title: 'Laptop',
-    author: "Love Happiness Foundation",
+    title: "Laptop",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity8,
-    title: 'Doors',
-    author: "Love Happiness Foundation",
+    title: "Doors",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity10,
-    title: 'Coffee',
-    author: "Love Happiness Foundation",
+    title: "Coffee",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity11,
-    title: 'Storage',
-    author: "Love Happiness Foundation",
+    title: "Storage",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity12,
-    title: 'Candle',
-    author: "Love Happiness Foundation",
+    title: "Candle",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity13,
-    title: 'Coffee table',
-    author: "Love Happiness Foundation",
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity9,
-    title: 'Coffee table',
-    author: "Love Happiness Foundation",
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity14,
-    title: 'Coffee table',
-    author: "Love Happiness Foundation",
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity15,
-    title: 'Coffee table',
-    author: "Love Happiness Foundation",
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity16,
-    title: 'Coffee table',
-    author: "Love Happiness Foundation",
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
   },
   {
     img: charity17,
-    title: 'Coffee table',
-    author: "Love Happiness Foundation",
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
   },
 ];

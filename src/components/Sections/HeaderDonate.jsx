@@ -3,7 +3,7 @@ import styled from "styled-components";
 // Components
 // import FullButton from "../Buttons/FullButton";
 // Assets
-import HeaderImage from "../../assets/vid/charity1.mp4";
+import HeaderImage from "../../assets/save/1 (1).mp4";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
@@ -14,7 +14,8 @@ export default function HeaderDonate() {
         <div>
           <h1 className="extraBold font60">Donate to our Orphanage</h1>
           <HeaderP className="font13 semiBold">
-            A small donation you make, does a great impact to the kids of our Orphanage
+            A small donation you make, does a great impact to the kids of our
+            Orphanage
           </HeaderP>
           {/* <BtnWrapper>
             <FullButton title="Donate" />
@@ -23,16 +24,30 @@ export default function HeaderDonate() {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} autoPlay/>
+          <Img
+            className="radius8"
+            src={HeaderImage}
+            alt="office"
+            style={{ zIndex: 9 }}
+            autoPlay
+          />
           <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
               <QuotesIcon />
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>We believe that we can save more lifes with you, Let's donate to needy people for better lives</em>
+                <em>
+                  We believe that we can save more lifes with you, Let's donate
+                  to needy people for better lives
+                </em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Lets be kind for children</p>
+              <p
+                className="font13 orangeColor textRight"
+                style={{ marginTop: "10px" }}
+              >
+                Lets be kind for children
+              </p>
             </div>
           </QuoteWrapper>
           <DotsWrapper>
@@ -44,7 +59,6 @@ export default function HeaderDonate() {
     </Wrapper>
   );
 }
-
 
 const Wrapper = styled.section`
   padding-top: 80px;
@@ -114,7 +128,8 @@ const ImageWrapper = styled.div`
   }
 `;
 const Img = styled.video`
-  width: 90%;
+  width: 100%;
+  height: 600px;
   @media (max-width: 560px) {
     width: 80%;
     height: auto;
@@ -151,5 +166,3 @@ const DotsWrapper = styled.div`
     display: none;
   }
 `;
-
-

@@ -1,35 +1,34 @@
 import React from "react";
-import Box from '@mui/material/Box';
-import { useTheme } from '@mui/material/styles';
-import MobileStepper from '@mui/material/MobileStepper';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import Grid from '@mui/material/Grid';
-import ListSubheader from '@mui/material/ListSubheader';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
+import Box from "@mui/material/Box";
+import { useTheme } from "@mui/material/styles";
+import MobileStepper from "@mui/material/MobileStepper";
+import Button from "@mui/material/Button";
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
+import Grid from "@mui/material/Grid";
+import ListSubheader from "@mui/material/ListSubheader";
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import DraftsIcon from "@mui/icons-material/Drafts";
+import SendIcon from "@mui/icons-material/Send";
 import Charity1 from "../../assets/img-charity/13.jpg";
-import Charity2 from "../../assets/img-charity/16.jpg";
-import Charity3 from "../../assets/img-charity/19.jpg";
-import Charity4 from "../../assets/img-charity/20.jpg";
-
+import Charity2 from "../../assets/save/1 (1).jpg";
+import Charity3 from "../../assets/save/1 (18).jpg";
+import Charity4 from "../../assets/save/1 (19).jpg";
 
 const ContactPageBox = () => {
-    return (
-        <div>
-            <SwipeableTextMobileStepper /> 
-            <RowAndColumnSpacing />
-        </div>
-    )
-}
+  return (
+    <div>
+      <SwipeableTextMobileStepper />
+      <RowAndColumnSpacing />
+    </div>
+  );
+};
 
 export default ContactPageBox;
 
@@ -37,19 +36,19 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
-    imgPath:Charity1,
+    label: "San Francisco – Oakland Bay Bridge, United States",
+    imgPath: Charity1,
   },
   {
-    label: 'Bird',
-    imgPath:Charity2,
+    label: "Bird",
+    imgPath: Charity2,
   },
   {
-    label: 'Bali, Indonesia',
+    label: "Bali, Indonesia",
     imgPath: Charity3,
   },
   {
-    label: 'Goč, Serbia',
+    label: "Goč, Serbia",
     imgPath: Charity4,
   },
 ];
@@ -72,9 +71,9 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ width: "100%" , flexGrow: 1 }}>
+    <Box sx={{ width: "100%", flexGrow: 1 }}>
       <AutoPlaySwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
@@ -86,10 +85,10 @@ function SwipeableTextMobileStepper() {
                 component="img"
                 sx={{
                   height: 655,
-                  display: 'block',
+                  display: "block",
                   // width: "100%",
-                  overflow: 'hidden',
-                  width: '100%',
+                  overflow: "hidden",
+                  width: "100%",
                 }}
                 src={step.imgPath}
                 alt={step.label}
@@ -109,7 +108,7 @@ function SwipeableTextMobileStepper() {
             disabled={activeStep === maxSteps - 1}
           >
             Next
-            {theme.direction === 'rtl' ? (
+            {theme.direction === "rtl" ? (
               <KeyboardArrowLeft />
             ) : (
               <KeyboardArrowRight />
@@ -118,7 +117,7 @@ function SwipeableTextMobileStepper() {
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? (
+            {theme.direction === "rtl" ? (
               <KeyboardArrowRight />
             ) : (
               <KeyboardArrowLeft />
@@ -131,40 +130,36 @@ function SwipeableTextMobileStepper() {
   );
 }
 
-  function RowAndColumnSpacing() {
-    return (
-      <Box sx={{ width: '100%',margin:'2rem 0' }}>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={12} md={4}>
-            <Location />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Contact />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <SocialMedia />
-          </Grid>
+function RowAndColumnSpacing() {
+  return (
+    <Box sx={{ width: "100%", margin: "2rem 0" }}>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={12} md={4}>
+          <Location />
         </Grid>
-      </Box>
-    );
-  }
-  
+        <Grid item xs={12} md={4}>
+          <Contact />
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <SocialMedia />
+        </Grid>
+      </Grid>
+    </Box>
+  );
+}
 
-
- function Location() {
-  const [open, setOpen] = React.useState(true);
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
-
+function Location() {
   return (
     <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}
+      sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
       component="nav"
       aria-labelledby="nested-list-subheader"
       subheader={
-        <ListSubheader component="div" id="nested-list-subheader" style={{fontSize: "1.5rem", color:'blue'}}>
+        <ListSubheader
+          component="div"
+          id="nested-list-subheader"
+          style={{ fontSize: "1.5rem", color: "blue" }}
+        >
           Location
         </ListSubheader>
       }
@@ -179,102 +174,102 @@ function SwipeableTextMobileStepper() {
         <ListItemIcon>
           <DraftsIcon />
         </ListItemIcon>
-        <ListItemText primary="Kasokoso Parish" />
+        <ListItemText primary="County: bulubandi nandekula" />
       </ListItemButton>
-      <ListItemButton onClick={handleClick}>
+      <ListItemButton>
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Kayaga Zone ward" />
+        <ListItemText primary="Sub county: Nakigo" />
       </ListItemButton>
     </List>
   );
 }
 
 function Contact() {
-    const [open, setOpen] = React.useState(true);
-  
-    const handleClick = () => {
-      setOpen(!open);
-    };
-  
-    return (
-      <List
-        sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}
-        component="nav"
-        aria-labelledby="nested-list-subheader"
-        subheader={
-          <ListSubheader component="div" id="nested-list-subheader" style={{fontSize: "1.5rem", color:'blue'}}>
-            Contact
-          </ListSubheader>
-        }
-      >
-        <ListItemButton>
-          <ListItemIcon>
-            <SendIcon />
-          </ListItemIcon>
-          <a href="mailto:mwesigwamarkmel@gmail.com, ronniewanz@gmail.com">
-            lovehappinessfoundation@gmail.com
-          </a>
-        </ListItemButton>
-        <ListItemButton>
-          <ListItemIcon>
-            <DraftsIcon />
-          </ListItemIcon>
-          <ListItemText primary="+256741466043" />
-        </ListItemButton>
-        <ListItemButton onClick={handleClick}>
+  return (
+    <List
+      sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+      subheader={
+        <ListSubheader
+          component="div"
+          id="nested-list-subheader"
+          style={{ fontSize: "1.5rem", color: "blue" }}
+        >
+          Contact
+        </ListSubheader>
+      }
+    >
+      <ListItemButton>
+        <ListItemIcon>
+          <SendIcon />
+        </ListItemIcon>
+        <a href="mailto:">save@gmail.com</a>
+      </ListItemButton>
+      <ListItemButton>
+        <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon>
+        <ListItemText primary="+256705097565" />
+      </ListItemButton>
+      {/* <ListItemButton onClick={handleClick}>
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
           <ListItemText primary="+256784957942" />
-        </ListItemButton>
-      </List>
-    );
-  }
+        </ListItemButton> */}
+    </List>
+  );
+}
 
-  function SocialMedia() {
-    const [open, setOpen] = React.useState(true);
-  
-    const handleClick = () => {
-      setOpen(!open);
-    };
-  
-    return (
-      <List
-        sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}
-        component="nav"
-        aria-labelledby="nested-list-subheader"
-        subheader={
-          <ListSubheader component="div" id="nested-list-subheader" style={{fontSize: "1.5rem", color:'blue'}}>
-            Social Media
-          </ListSubheader>
-        }
-      >
-        <ListItemButton>
-          <ListItemIcon>
-            <SendIcon />
-          </ListItemIcon>
-          <a target="_blank" href="https://twitter.com/Lovehappiness28?s=09" rel="noreferrer">
-            Twitter
-          </a>
-        </ListItemButton>
-        <ListItemButton>
-          <ListItemIcon>
-            <DraftsIcon />
-          </ListItemIcon>
-          <a target="_blank" href="https://www.instagram.com/lovehappiness2001/" rel="noreferrer">
-            Instagram
-          </a>
-        </ListItemButton>
-        <ListItemButton onClick={handleClick}>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <a href="https://tiktok.com/@muwerezamarvin?_t=8Vx27tMV4mD&_r=1" target="_blank" rel="noreferrer">
-            Tiktok
-          </a>
-        </ListItemButton>
-      </List>
-    );
-  }
+function SocialMedia() {
+  const [open, setOpen] = React.useState(true);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+
+  return (
+    <List
+      sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+      subheader={
+        <ListSubheader
+          component="div"
+          id="nested-list-subheader"
+          style={{ fontSize: "1.5rem", color: "blue" }}
+        >
+          Social Media
+        </ListSubheader>
+      }
+    >
+      <ListItemButton>
+        <ListItemIcon>
+          <SendIcon />
+        </ListItemIcon>
+        <a target="_blank" href="/contact" rel="noreferrer">
+          Twitter
+        </a>
+      </ListItemButton>
+      <ListItemButton>
+        <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon>
+        <a target="_blank" href="/contact" rel="noreferrer">
+          Instagram
+        </a>
+      </ListItemButton>
+      <ListItemButton onClick={handleClick}>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <a href="/contact" target="_blank" rel="noreferrer">
+          Tiktok
+        </a>
+      </ListItemButton>
+    </List>
+  );
+}

@@ -10,14 +10,16 @@ import BlogPage from "./screens/Blog.jsx";
 import Projects from "./screens/Projects.jsx";
 import Donate from "./screens/Donate.jsx";
 
-
 export default function App() {
   return (
     <>
       <Helmet>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Khula:wght@400;600;800&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Khula:wght@400;600;800&display=swap"
+          rel="stylesheet"
+        />
       </Helmet>
       <Routes>
         <Route path="/" element={<Landing />} />
@@ -32,4 +34,3 @@ export default function App() {
     </>
   );
 }
-

@@ -4,24 +4,25 @@ import styled from "styled-components";
 import ProjectBox from "../Elements/ProjectBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
-import ProjectImg1 from "../../assets/vid/1.mp4";
-import ProjectImg2 from "../../assets/vid/2.mp4";
-import ProjectImg3 from "../../assets/vid/3.mp4";
-import ProjectImg4 from "../../assets/vid/4.mp4";
-import ProjectImg5 from "../../assets/vid/5.mp4";
-import ProjectImg6 from "../../assets/vid/6.mp4";
+import ProjectImg1 from "../../assets/save/1 (1).mp4";
+import ProjectImg2 from "../../assets/save/1 (2).mp4";
+import ProjectImg3 from "../../assets/save/1 (3).mp4";
+import ProjectImg4 from "../../assets/save/1 (4).mp4";
+// import ProjectImg5 from "../../assets/vid/5.mp4";
+// import ProjectImg6 from "../../assets/vid/6.mp4";
 import AddImage2 from "../../assets/img-charity/charity1.jpg";
 import { Link } from "react-router-dom";
 
 export default function Projects() {
   return (
-    <Wrapper id="projects" style={{margin:'7rem 0 0 0'}}>
+    <Wrapper id="projects" style={{ margin: "7rem 0 0 0" }}>
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Awesome Projects</h1>
             <p className="font13">
-              Our videos page showing the recent projects we covered over the past days
+              Our videos page showing the recent projects we covered over the
+              past days
               <br />
               Save a soul with a little you have.
             </p>
@@ -30,7 +31,7 @@ export default function Projects() {
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg1}
-                title="Love Happiness Foundation"
+                title="Save My Soul For Africa"
                 text="Children having the small we prepared for them."
                 // action={() => alert("clicked")}
               />
@@ -38,16 +39,16 @@ export default function Projects() {
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg2}
-                title="Love Happiness Foundation"
-                text="Children having the small we prepared for them."
+                title="Save My Soul For Africa"
+                // text="Children having the small we prepared for them."
                 // action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg3}
-                title="Love Happiness Foundation"
-                text="The moment of preparing the meals for the kids."
+                title="Save My Soul For Africa"
+                // text="The moment of preparing the meals for the kids."
                 // action={() => alert("clicked")}
               />
             </div>
@@ -56,31 +57,34 @@ export default function Projects() {
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg4}
-                title="Love Happiness Foundation"
-                text="The moment of preparing the meals for the kids."
+                title="Save My Soul For Africa"
+                // text="The moment of preparing the meals for the kids."
                 // action={() => alert("clicked")}
               />
             </div>
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            {/* <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg5}
-                title="Love Happiness Foundation"
+                title="Save My Soul For Africa"
                 text="The moment of serving the meals for the kids to enjoy."
                 // action={() => alert("clicked")}
               />
-            </div>
-            <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            </div> */}
+            {/* <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg6}
-                title="Love Happiness Foundation"
+                title="Save My Soul For Africa"
                 text="The moment of preparing the meals for the kids."
                 // action={() => alert("clicked")}
               />
-            </div>
+            </div> */}
           </div>
           <div className="row flexCenter">
             <div style={{ margin: "50px 0", width: "200px" }}>
-              <FullButton title="Load More" action={() => alert("More coming")} />
+              <FullButton
+                title="Load More"
+                action={() => alert("More coming")}
+              />
             </div>
           </div>
         </div>
@@ -96,12 +100,19 @@ export default function Projects() {
               </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold">Your small contribution will save a life</h4>
-              <h2 className="font40 extraBold">Love Happiness Foundation</h2>
+              <h4 className="font15 semiBold">
+                Your small contribution will save a life
+              </h4>
+              <h2 className="font40 extraBold">Save My Soul For Africa</h2>
               <p className="font12">
-                The small donation you give can help to educate, feed, accomodate the helpless children in Uganda, Please donate for the betterness of these kids
+                The small donation you give can help to educate, feed,
+                accomodate the helpless children in Uganda, Please donate for
+                the betterness of these kids
               </p>
-              <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
+              <ButtonsRow
+                className="flexNullCenter"
+                style={{ margin: "30px 0" }}
+              >
                 <div style={{ width: "190px" }}>
                   <Link to="/donate">
                     <FullButton title="Donate" />
@@ -109,7 +120,7 @@ export default function Projects() {
                 </div>
                 <div style={{ width: "190px", marginLeft: "15px" }}>
                   <Link to="/contact">
-                  < FullButton title="Contact Us"  border />
+                    <FullButton title="Contact Us" border />
                   </Link>
                 </div>
               </ButtonsRow>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-import HeaderImage from "../../assets/img-charity/11.jpg";
+import HeaderImage from "../../assets/save/1 (21).jpg";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
@@ -12,9 +12,11 @@ export default function Header() {
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">We are a non profit Charity Organisation</h1>
+          <h1 className="extraBold font60">
+            We are a non profit Charity Organisation
+          </h1>
           <HeaderP className="font13 semiBold">
-            It was founded in 2017 by a team of three people Muwereza Marvin, Suubi Nicholas, and Ntambi Hakim.
+            It was founded in 2017 by Naminya Rajabu.
           </HeaderP>
           <BtnWrapper>
             <FullButton title="Donate" />
@@ -23,16 +25,29 @@ export default function Header() {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
+          <Img
+            className="radius8"
+            src={HeaderImage}
+            alt="office"
+            style={{ zIndex: 9 }}
+          />
           <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
               <QuotesIcon />
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>We believe that we can save more lifes with you, Let's donate to needy people for better lives</em>
+                <em>
+                  We believe that we can save more lifes with you, Let's donate
+                  to needy people for better lives
+                </em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Lets be kind for children</p>
+              <p
+                className="font13 orangeColor textRight"
+                style={{ marginTop: "10px" }}
+              >
+                Lets be kind for children
+              </p>
             </div>
           </QuoteWrapper>
           <DotsWrapper>
@@ -44,7 +59,6 @@ export default function Header() {
     </Wrapper>
   );
 }
-
 
 const Wrapper = styled.section`
   padding-top: 80px;
@@ -114,7 +128,9 @@ const ImageWrapper = styled.div`
   }
 `;
 const Img = styled.img`
-  width: 90%;
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
   @media (max-width: 560px) {
     width: 80%;
     height: auto;
@@ -151,5 +167,3 @@ const DotsWrapper = styled.div`
     display: none;
   }
 `;
-
-

@@ -5,31 +5,60 @@ import { Link } from "react-scroll";
 import LogoImg from "../../assets/svg/Logo";
 
 export default function Contact() {
-
   const getCurrentYear = () => {
     return new Date().getFullYear();
-  }
+  };
 
   return (
     <Wrapper>
       <div className="darkBg">
         <div className="container">
-          <InnerWrapper className="flexSpaceCenter" style={{ padding: "30px 0" }}>
-            <Link className="flexCenter animate pointer" to="home" smooth={true} offset={-80}>
+          <InnerWrapper
+            className="flexSpaceCenter"
+            style={{ padding: "30px 0" }}
+          >
+            <Link
+              className="flexCenter animate pointer"
+              to="home"
+              smooth={true}
+              offset={-80}
+            >
               <LogoImg />
-              <h1 className="font15 extraBold whiteColor" style={{ marginLeft: "15px" }}>
-                Love Happiness Foundation
+              <h1
+                className="font15 extraBold whiteColor"
+                style={{ marginLeft: "15px" }}
+              >
+                Save My Soul For Africa
               </h1>
             </Link>
             <StyleP className="whiteColor font13">
-              © {getCurrentYear()} - <span className="purpleColor font13">Love Happiness Foundation</span> All Right Reserved
+              © {getCurrentYear()} -{" "}
+              <span className="purpleColor font13">
+                Save My Soul For Africa
+              </span>{" "}
+              All Right Reserved
             </StyleP>
 
-            <Link className="whiteColor animate pointer font13" to="home" smooth={true} offset={-80}>
+            <Link
+              className="whiteColor animate pointer font13"
+              to="home"
+              smooth={true}
+              offset={-80}
+            >
               Back to top
             </Link>
           </InnerWrapper>
         </div>
+        <StyleP className="whiteColor font13" style={{ textAlign: "center" }}>
+          © {getCurrentYear()} -{" "}
+          <span className="purpleColor font13">Made with love by</span>{" "}
+          <a
+            href="mailto:rogerrisha@gmail.com"
+            style={{ color: "white", cursor: "pointer" }}
+          >
+            RCR TECHNOLOGIES
+          </a>
+        </StyleP>
       </div>
     </Wrapper>
   );

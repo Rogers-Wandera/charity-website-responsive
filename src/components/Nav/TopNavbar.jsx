@@ -20,51 +20,80 @@ export default function TopNavbar() {
     };
   }, [y]);
 
-
   return (
     <>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
-      <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}>
+      <Wrapper
+        className="flexCenter animate whiteBg"
+        style={y > 100 ? { height: "60px" } : { height: "80px" }}
+      >
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <LogoIcon />
             <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
-              Love Happiness
+              Save My Soul For Africa
             </h1>
           </Link>
-          <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
+          <BurderWrapper
+            className="pointer"
+            onClick={() => toggleSidebar(!sidebarOpen)}
+          >
             <BurgerIcon />
           </BurderWrapper>
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="/" >
+              <Link
+                activeClass="active"
+                style={{ padding: "10px 15px" }}
+                to="/"
+              >
                 Home
               </Link>
               {/* <Link to="/">Home</Link> */}
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="/about">
+              <Link
+                activeClass="active"
+                style={{ padding: "10px 15px" }}
+                to="/about"
+              >
                 About
               </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="/contact" >
+              <Link
+                activeClass="active"
+                style={{ padding: "10px 15px" }}
+                to="/contact"
+              >
                 Contact
               </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="/gallery" >
-               Gallery
+              <Link
+                activeClass="active"
+                style={{ padding: "10px 15px" }}
+                to="/gallery"
+              >
+                Gallery
               </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="/blog">
+              <Link
+                activeClass="active"
+                style={{ padding: "10px 15px" }}
+                to="/blog"
+              >
                 Blog
               </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="/projects">
+              <Link
+                activeClass="active"
+                style={{ padding: "10px 15px" }}
+                to="/projects"
+              >
                 Projects
               </Link>
             </li>
@@ -81,7 +110,11 @@ export default function TopNavbar() {
               </a>
             </li> */}
             <li className="semiBold font15 pointer flexCenter">
-              <a href="/donate" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
+              <a
+                href="/donate"
+                className="radius8 lightBg"
+                style={{ padding: "10px 15px" }}
+              >
                 Donate
               </a>
             </li>
@@ -102,7 +135,7 @@ const Wrapper = styled.nav`
 const NavInner = styled.div`
   position: relative;
   height: 100%;
-`
+`;
 const BurderWrapper = styled.button`
   outline: none;
   border: 0px;
@@ -125,5 +158,3 @@ const UlWrapperRight = styled.ul`
     display: none;
   }
 `;
-
-

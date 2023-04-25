@@ -1,58 +1,71 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import {Button} from '@mui/material';
+import { Button } from "@mui/material";
 // Assets
 import ContactImg1 from "../../assets/img-charity/2.jpg";
 import ContactImg2 from "../../assets/img-charity/10.jpg";
 import ContactImg3 from "../../assets/img-charity/20.jpg";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import SuccessMessage from "./SuccessMessage";
-
 
 const initial_state = {
   name: "",
   email: "",
   subject: "",
-  message: ""
-}
+  message: "",
+};
 
 export default function Contact() {
-  const [state, setState] = useState(initial_state)
-  const [modal,setModal] = useState(false);
+  const [state, setState] = useState(initial_state);
+  const [modal, setModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    setState({...state,[name]: value})
-  }
+    setState({ ...state, [name]: value });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const templateParams = {
+      status: "Contact Page",
       name: state.name,
       email: state.email,
       subject: state.subject,
-      message: state.message
+      message: state.message,
       // notes: 'Check this out!'
     };
-    return emailjs.send('service_7jw99kd','contact_form_charity', templateParams, 'J7G1lNfDggeMJoWmB')
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        setState({name:"",email:'', subject:'', message:''})
-        setModal(true)
-        setErrorMessage(`Message has been successfully sent we will get back to you on ${state.email} shortly`)
-      }, (err) => {
-        console.log('FAILED...', err);
-        setModal(true)
-        setErrorMessage(`Sorry Message has not been sent this could be because of slow Internet connection.`)
-      });
-    }
+    return emailjs
+      .send(
+        "service_7jw99kd",
+        "contact_form_charity",
+        templateParams,
+        "J7G1lNfDggeMJoWmB"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setState({ name: "", email: "", subject: "", message: "" });
+          setModal(true);
+          setErrorMessage(
+            `Message has been successfully sent we will get back to you on ${state.email} shortly`
+          );
+        },
+        (err) => {
+          console.log("FAILED...", err);
+          setModal(true);
+          setErrorMessage(
+            `Sorry Message has not been sent this could be because of slow Internet connection.`
+          );
+        }
+      );
+  };
 
-   const handleCloseModal = () => {
-     setModal(false)
-     setErrorMessage("");
-    }
+  const handleCloseModal = () => {
+    setModal(false);
+    setErrorMessage("");
+  };
   return (
     <Wrapper id="contact">
       <div className="lightBg">
@@ -65,70 +78,93 @@ export default function Contact() {
               We will get back to you
             </p>
           </HeaderInfo>
-          {
-            modal && <SuccessMessage handleCloseModal={handleCloseModal} errorMessage={errorMessage}/> 
-          }
+          {modal && (
+            <SuccessMessage
+              handleCloseModal={handleCloseModal}
+              errorMessage={errorMessage}
+            />
+          )}
           <div className="row" style={{ paddingBottom: "30px" }}>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <Form onSubmit={handleSubmit}>
                 <label className="font13">Full name:</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
                   value={state.name}
                   onChange={handleChange}
-                  className="font20 extraBold" 
+                  className="font20 extraBold"
                 />
                 <label className="font13">Email:</label>
-                <input 
-                  type="text" 
-                  id="email" 
-                  name="email" 
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
                   value={state.email}
                   onChange={handleChange}
-                  className="font20 extraBold" 
+                  className="font20 extraBold"
                 />
                 <label className="font13">Subject:</label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  name="subject" 
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
                   value={state.subject}
                   onChange={handleChange}
-                  className="font20 extraBold" 
+                  className="font20 extraBold"
                 />
                 <label className="font13">Message:</label>
-                <textarea 
-                  rows="4" 
-                  cols="50" 
-                  type="text" 
-                  id="message" 
-                  name="message" 
+                <textarea
+                  rows="4"
+                  cols="50"
+                  type="text"
+                  id="message"
+                  name="message"
                   value={state.message}
                   onChange={handleChange}
-                  className="font20 extraBold" 
+                  className="font20 extraBold"
                 />
                 <Button
                   type="submit"
                   variant="contained"
                   color="secondary"
-                  sx={{width:'50%'}}
-                >Send Message</Button>
+                  sx={{ width: "50%" }}
+                >
+                  Send Message
+                </Button>
               </Form>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
-              <div style={{ width: "50%" }} className="flexNullCenter flexColumn">
+              <div
+                style={{ width: "50%" }}
+                className="flexNullCenter flexColumn"
+              >
                 <ContactImgBox>
-                  <img src={ContactImg1} alt="office" className="radius6" style={{width:'220px'}}/>
+                  <img
+                    src={ContactImg1}
+                    alt="office"
+                    className="radius6"
+                    style={{ width: "220px" }}
+                  />
                 </ContactImgBox>
                 <ContactImgBox>
-                  <img src={ContactImg2} alt="office" className="radius6" style={{width:'180px'}}/>
+                  <img
+                    src={ContactImg2}
+                    alt="office"
+                    className="radius6"
+                    style={{ width: "180px" }}
+                  />
                 </ContactImgBox>
               </div>
               <div style={{ width: "50%" }}>
                 <div style={{ marginTop: "100px" }}>
-                  <img src={ContactImg3} alt="office" className="radius6" style={{width:'190px'}}/>
+                  <img
+                    src={ContactImg3}
+                    alt="office"
+                    className="radius6"
+                    style={{ width: "190px" }}
+                  />
                 </div>
               </div>
             </div>
@@ -169,16 +205,7 @@ const Form = styled.form`
   }
 `;
 const ContactImgBox = styled.div`
-  max-width: 180px; 
-  align-self: flex-end; 
+  max-width: 180px;
+  align-self: flex-end;
   margin: 10px 30px 10px 0;
 `;
-
-
-
-
-
-
-
-
-

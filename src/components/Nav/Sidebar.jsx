@@ -12,11 +12,12 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
           <LogoIcon />
-          <h1 className="whiteColor font20" style={{ marginLeft: "15px" }}>
-            Love Happiness
-          </h1>
+          <h1 className="whiteColor font20">Save My Soul For Africa</h1>
         </div>
-        <CloseBtn onClick={() => toggleSidebar(!sidebarOpen)} className="animate pointer">
+        <CloseBtn
+          onClick={() => toggleSidebar(!sidebarOpen)}
+          className="animate pointer"
+        >
           <CloseIcon />
         </CloseBtn>
       </SidebarHeader>
@@ -110,7 +111,11 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
           </a>
         </li> */}
         <li className="semiBold font15 pointer flexCenter">
-          <a href="/donate" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
+          <a
+            href="/donate"
+            className="radius8 lightBg"
+            style={{ padding: "10px 15px" }}
+          >
             Donate
           </a>
         </li>

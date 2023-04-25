@@ -8,9 +8,8 @@ import styled from "styled-components";
 // import Blog from "../components/Sections/Blog";
 // import Pricing from "../components/Sections/Pricing";
 // import Contact from "../components/Sections/Contact";
-import Footer from "../components/Sections/Footer"
+import Footer from "../components/Sections/Footer";
 import TestimonialSlider from "../components/Elements/TestimonialSlider";
-
 
 export default function Landing() {
   return (
@@ -23,7 +22,7 @@ export default function Landing() {
       {/* <Blog /> */}
       {/* <Pricing /> */}
       {/* <Contact /> */}
-      
+
       <Footer />
     </>
   );
@@ -32,12 +31,12 @@ export default function Landing() {
 const TestimonialSliderHome = () => {
   return (
     <Wrapper>
-      <div className="lightBg" style={{padding: '50px 0'}}>
+      <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">What People Say?</h1>
             <p className="font13">
-              What people say about Love Happiness Foundation Uganda
+              What people say about Save My Soul For Africa Uganda
               <br />
               These are people reviews that they give to our Foundation
             </p>
@@ -46,8 +45,8 @@ const TestimonialSliderHome = () => {
         </div>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   width: 100%;
@@ -59,4 +58,3 @@ const HeaderInfo = styled.div`
     text-align: center;
   }
 `;
-

@@ -6,9 +6,9 @@ import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
 import AddImage1 from "../../assets/img-charity/charity1.jpg";
-import AddImage2 from "../../assets/img-charity/2.jpg";
-import AddImage3 from "../../assets/img-charity/3.jpg";
-import AddImage4 from "../../assets/img-charity/21.jpg";
+import AddImage2 from "../../assets/save/1 (15).jpg";
+import AddImage3 from "../../assets/save/1 (2).jpg";
+import AddImage4 from "../../assets/save/1 (16).jpg";
 
 export default function Services() {
   return (
@@ -18,12 +18,13 @@ export default function Services() {
           <ClientSlider />
         </div>
       </div> */}
-      <div className="whiteBg" style={{ padding: "60px 0" }}>
+      <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">What we do ?</h1>
             <p className="font13">
-              We believe that we can save more lifes with you, Your small donation can help to save the 
+              We believe that we can save more lifes with you, Your small
+              donation can help to save the
               <br />
               Starving Children in Uganda.
             </p>
@@ -51,8 +52,11 @@ export default function Services() {
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <ServiceBox icon="printer" 
-                title="Residence Facilitiest" subtitle="We provide the kids with places to sleep and to socialise with their fellows, these places are in form of Homes for the helpless, with the funds we get from well wishers we make sure to provide good accomodation to the kids." />
+              <ServiceBox
+                icon="printer"
+                title="Residence Facilitiest"
+                subtitle="We provide the kids with places to sleep and to socialise with their fellows, these places are in form of Homes for the helpless, with the funds we get from well wishers we make sure to provide good accomodation to the kids."
+              />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
         </div>
@@ -61,20 +65,31 @@ export default function Services() {
             <Advertising className="flexSpaceCenter">
               <AddLeft>
                 <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">Love Happiness</h2>
+                <h2 className="font40 extraBold">Save My Soul For Africa</h2>
+                <p className="font13">It was founded in 2017 Naminya Rajabu</p>
                 <p className="font13">
-                  It was founded in 2017 by a team of three people Muwereza Marvin, Suubi Nicholas and Ntambi Hakim
+                  The Organsisation was started in 2017 due to the fact that
+                  there are many street kids here in Uganda with no one helping
+                  them. we managed to start the Organsisation to help street
+                  kids because we know the difficulties faced by street kids
+                  after loosing parents.
                 </p>
-                <p className="font13">
-                  We started this Organsisation in 2017 due that we were also street kids we were adopted by a family from street whose occupation was farming and they were serving in church as pastor.
-                  we managed to start the Organsisation to help street kids because we know the difficulties faced by street kids after loosing parents.
-                </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
+                <ButtonsRow
+                  className="flexNullCenter"
+                  style={{ margin: "30px 0" }}
+                >
                   <div style={{ width: "190px" }}>
-                    <FullButton title="Donate" action={() => alert("clicked")} />
+                    <FullButton
+                      title="Donate"
+                      action={() => alert("clicked")}
+                    />
                   </div>
                   <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Contact Us" action={() => alert("clicked")} border />
+                    <FullButton
+                      title="Contact Us"
+                      action={() => alert("clicked")}
+                      border
+                    />
                   </div>
                 </ButtonsRow>
               </AddLeft>
