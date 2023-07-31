@@ -20,6 +20,11 @@ import charity14 from "../../assets/save/1 (14).jpg";
 import charity15 from "../../assets/save/1 (15).jpg";
 import charity16 from "../../assets/save/1 (16).jpg";
 import charity17 from "../../assets/save/1 (17).jpg";
+import charity18 from "../../assets/more-charity/1.jpg";
+import charity19 from "../../assets/more-charity/2.jpg";
+import charity20 from "../../assets/more-charity/4.jpg";
+import charity21 from "../../assets/more-charity/5.jpg";
+import charity22 from "../../assets/more-charity/12.jpg";
 
 export default function GalleryImage() {
   return (
@@ -131,6 +136,41 @@ const itemData = [
   },
   {
     img: charity17,
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
+  },
+  {
+    img: charity18,
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
+  },
+  {
+    img: charity19,
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
+  },
+  {
+    img: charity18,
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
+  },
+  {
+    img: charity19,
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
+  },
+  {
+    img: charity20,
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
+  },
+  {
+    img: charity21,
+    title: "Coffee table",
+    author: "Save My Soul For Africa",
+  },
+  {
+    img: charity22,
     title: "Coffee table",
     author: "Save My Soul For Africa",
   },

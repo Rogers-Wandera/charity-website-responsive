@@ -28,9 +28,9 @@ import Charity1 from "../../assets/img-charity/13.jpg";
 import Charity2 from "../../assets/save/1 (1).jpg";
 import Charity3 from "../../assets/save/1 (18).jpg";
 import Charity4 from "../../assets/save/1 (19).jpg";
-import Ronnie from "../../assets/img/contact-1.png";
-import Marvin from "../../assets/img/contact-1.png";
-import another from "../../assets/img/contact-1.png";
+import Ronnie from "../../assets/more-charity/19.jpg";
+import mutambuze from "../../assets/more-charity/18.jpg";
+import nimanya from "../../assets/more-charity/101.jpg";
 import pdf from "../../assets/pdf/rajbuoy.pdf";
 import { Viewer, Worker } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
@@ -130,18 +130,16 @@ const AboutInfo = () => {
       <div class="row-about-us">
         <div class="column-about-us">
           <div class="card-about-us">
-            <img
-              src={Marvin}
-              alt="Jane"
-              style={{ width: "100%", height: "300px" }}
-            />
+            <div style={{ width: "100%", height: "400px" }}>
+              <img
+                src={nimanya}
+                alt="Jane"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
             <div class="container-about-us">
               <h2>Mr. Naminya Rajabu</h2>
               <p class="title">Executive Director</p>
-              <p></p>
-              <p>
-                <a href="mailto:email@email.com">email@email.com</a>
-              </p>
               {/* <p><button class="button">Contact</button></p> */}
             </div>
           </div>
@@ -149,18 +147,16 @@ const AboutInfo = () => {
 
         <div class="column-about-us">
           <div class="card-about-us">
-            <img
-              src={another}
-              alt="Mike"
-              style={{ width: "100%", height: "300px" }}
-            />
+            <div style={{ width: "100%", height: "400px" }}>
+              <img
+                src={mutambuze}
+                alt="Mike"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
             <div class="container-about-us">
               <h2>Mutambuze Salim</h2>
               <p class="title">Chairperson</p>
-              {/* <p>Some text that describes me lorem ipsum ipsum lorem.</p> */}
-              <p>
-                <a href="mailto:mut@gmail.com">Mutambuze@gmail.com</a>
-              </p>
               {/* <p><button class="button">Contact</button></p> */}
             </div>
           </div>
@@ -168,19 +164,16 @@ const AboutInfo = () => {
 
         <div class="column-about-us">
           <div class="card-about-us">
-            <img
-              src={Ronnie}
-              alt="Mike"
-              style={{ width: "100%", height: "300px" }}
-            />
+            <div style={{ width: "100%", height: "400px" }}>
+              <img
+                src={Ronnie}
+                alt="Mike"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
             <div class="container-about-us">
-              <h2>Mr. Luluma Innocent</h2>
+              <h2>Mr. Lulume Innocent</h2>
               <p class="title">Member</p>
-              {/* <p>Some text that describes me lorem ipsum ipsum lorem.</p> */}
-              <p>
-                <a href="mailto:lumala@gmail.com">lumala@gmail.com</a>
-              </p>
-              {/* <p><button class="button">Contact</button></p> */}
             </div>
           </div>
         </div>
